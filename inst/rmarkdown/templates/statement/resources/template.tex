@@ -40,15 +40,19 @@ $endif$
 \chead{}
 \rhead{\footnotesize \emph{$title$}}
 %\lfoot{}
-%\cfoot{\small \thepage/\pageref*{LastPage}}
-%\rfoot{}
+%\cfoot{}
+%\rfoot{\small \thepage/\pageref*{LastPage}}
 
-\fancypagestyle{firststyle}
-{
-\renewcommand{\headrulewidth}{0pt}%
-   \fancyhf{}
-   \fancyfoot[C]{\small \thepage/\pageref*{LastPage}}
+\fancyfoot[C]{}
+\fancyfoot[R]{\small \thepage/\pageref*{LastPage}}
+\fancypagestyle{plain}{% Redefine plain style
+	\fancyhf{}% Clear header/footer
+	\fancyfoot[R]{\small \thepage/\pageref*{LastPage}}% Page number on right
 }
+
+
+
+
 
 %\def\labelitemi{--}
 %\usepackage{enumitem}
@@ -182,7 +186,7 @@ $endfor$
 	\vspace{1 mm}   
 $author$ \\
 \emph{$affiliation$} \\
-$if(email)$\texttt{$email$}$else$TBD$endif$   \\
+$if(email)$\texttt{\textnormal{$email$}}$else$TBD$endif$   \\
 
 % \blankline 
   
