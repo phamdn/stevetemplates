@@ -1,4 +1,4 @@
-Package: stevetemplates
+Package: stevetemplates23
 Type: Package
 Title: Steve's R Markdown Templates
 Depends: R (>= 3.5.0)
